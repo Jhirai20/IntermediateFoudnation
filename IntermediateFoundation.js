@@ -85,3 +85,15 @@ function double(arr) {
 	return arrnew;
 }
 console.log(double([4, "Ulysses", 42, false]));
+
+
+//Part 2 Fibonacci  Recursion
+function fib(num){
+	if (num==0 ||num==1){
+		return num;
+	}
+	else{
+		return (fib(num-1)+fib(num-2));
+	}
+}
+console.log(fib(7));
