@@ -50,3 +50,38 @@ function ndLast(arr,Y){
 	}
 }
 console.log( ndLast([5,2,3,6,4,9,7],3));
+
+//6) Array: Second-Largest:
+function sort(arr) {
+	var done = false;
+  while (!done) {
+    done = true;
+    for (var i = 1; i < arr.length; i += 1) {
+      if (arr[i - 1] > arr[i]) {
+        done = false;
+        var tmp = arr[i - 1];
+        arr[i - 1] = arr[i];
+        arr[i] = tmp;
+      }
+    }
+  }
+	return arr
+}
+
+function SndLarg(arr){
+	sort(arr)
+	return arr[arr.length-2]
+}
+console.log(SndLarg([42,1,4,3.14,7]));
+
+//7) Double Trouble:
+function double(arr) {
+	var arrnew=[]
+	for (var i = 0; i < arr.length; i++) {
+		arrnew.push(arr[i]);
+		arrnew.push(arr[i]);
+	}
+
+	return arrnew;
+}
+console.log(double([4, "Ulysses", 42, false]));
